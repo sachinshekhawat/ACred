@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewMain"
+    android:background="#121212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMain"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Profile Section -->
+        <LinearLayout
+            android:id="@+id/profileSection"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:src="@drawable/ic_man"
+                android:layout_marginEnd="16dp" />
+
+            <LinearLayout
+                android:id="@+id/profileInfoLayout"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewUserName"
+                    android:text="@string/andaz_kumar"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewMemberSince"
+                    android:text="member since Dec, 2020"
+                    android:textColor="#AAAAAA"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewEditProfile"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_edit"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- CRED Garage -->
+        <LinearLayout
+            android:id="@+id/credGarageSection"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewGarageCar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_car"
+                app:tint="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/credGarageInfoLayout"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewGarageDescription"
+                    android:text="get to know your vehicles, inside out"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewGarageTitle"
+                    android:text="CRED garage"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginTop="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewGarageArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow"
+                app:tint="#FFFFFF"/>
+        </LinearLayout>
+
+        <!-- Profile Highlights Section -->
+        <LinearLayout
+            android:id="@+id/profileHighlightsSection"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Credit Score -->
+            <LinearLayout
+                android:id="@+id/creditScoreLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewCreditIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_credit"
+                    app:tint="#FFFFFF"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/textViewCreditLabel"
+                    android:text="credit score"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewRefreshAvailable"
+                    android:text="REFRESH AVAILABLE"
+                    android:textColor="#00FF00"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewCreditScore"
+                    android:text="757"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageViewCreditArrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Separator Line -->
+            <View
+                android:id="@+id/separatorCreditCashback"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Lifetime Cashback -->
+            <LinearLayout
+                android:id="@+id/lifetimeCashbackLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewRupeeIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_rupee"
+                    app:tint="#FFFFFF"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/textViewCashbackLabel"
+                    android:text="lifetime cashback"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewLifetimeCashback"
+                    android:text="₹3"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageViewCashbackArrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Separator Line -->
+            <View
+                android:id="@+id/separatorCashbackBalance"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bank Balance -->
+            <LinearLayout
+                android:id="@+id/bankBalanceLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewCashIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cash"
+                    app:tint="#FFFFFF"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:id="@+id/textViewBankBalanceLabel"
+                    android:text="bank balance"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewCheckBalance"
+                    android:text="check"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageViewBankBalanceArrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_arrow"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Rewards Section -->
+        <LinearLayout
+            android:id="@+id/rewardsSection"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewRewardsTitle"
+                android:text="YOUR REWARDS &amp; BENEFITS"
+                android:textColor="#AAAAAA"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Cashback Balance -->
+            <LinearLayout
+                android:id="@+id/cashbackBalanceLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/cashbackBalanceInfoLayout"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewCashbackBalanceLabel"
+                        android:text="cashback balance"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textViewCashbackBalanceValue"
+                        android:text="₹0"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewCashbackBalanceNext"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_next"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Separator Line -->
+            <View
+                android:id="@+id/separatorCashbackCoins"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Coins -->
+            <LinearLayout
+                android:id="@+id/coinsLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/coinsInfoLayout"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewCoinsLabel"
+                        android:text="coins"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textViewCoinsValue"
+                        android:text="26,46,583"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewCoinsNext"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_next"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+
+            <!-- Separator Line -->
+            <View
+                android:id="@+id/separatorCoinsRefer"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#333333"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Win upto Rs 1000 -->
+            <LinearLayout
+                android:id="@+id/referEarnLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/referEarnInfoLayout"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textViewReferTitle"
+                        android:text="win upto Rs 1000"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textViewReferDescription"
+                        android:text="refer and earn"
+                        android:textColor="#AAAAAA"
+                        android:textSize="14sp"
+                        android:layout_marginTop="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewReferNext"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_next"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Transactions Section -->
+        <LinearLayout
+            android:id="@+id/transactionsSection"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:background="#1E1E1E"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewTransactionsTitle"
+                android:text="TRANSACTIONS &amp; SUPPORT"
+                android:textColor="#AAAAAA"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/allTransactionsLayout"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textViewAllTransactions"
+                    android:text="all transactions"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/imageViewTransactionsNext"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_next"
+                    app:tint="#FFFFFF"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
